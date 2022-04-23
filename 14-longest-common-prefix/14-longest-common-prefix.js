@@ -9,7 +9,6 @@
   let i = 0
   while (uncommonLetter === false){
     for(let j = 0; j < strs.length; j++){
-      console.log(`letter: ${strs[j][i]}`)
       if(strs[j][i] === undefined){
         uncommonLetter = true
         break
