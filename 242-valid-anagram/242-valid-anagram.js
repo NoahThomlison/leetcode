@@ -7,12 +7,14 @@
   if(t.length !== s.length){
     return false
   }
-  t = t.split("")
-  for(let i = 0; i <= s.length; i++){
-    let index = t.indexOf(s[i])
-    if(index > -1){
-      t.splice(index, 1)
-    }
-  }
-  return(t.length === 0 ? true : false)
+  
+  s = s.split("").sort()
+  t = t.split("").sort()
+
+  let same = true
+  s.forEach((letter, index) => {
+    if(t[index] !== letter){same = false}
+  });
+
+  return(same)
 };
