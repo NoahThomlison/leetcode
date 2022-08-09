@@ -4,7 +4,11 @@
  */
  var reverseString = function(s) {
   let t = s.length - 1
-  for(let i = 0; i < s.length/2 ; i++){
+  let times
+  (s%2 === 0 ? times = s.length/2+1 : times = s.length/2 - 1)
+  console.log(times)
+  for(let i = 0; i <= times  ; i++){
+    console.log(s[i])
     let temp = s[i]
     if(s[i] === s[t]){
       t--
